@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {
+    --prim-color: #f2dcc2;
+    --sec-color: #a81824;
+    --prim-font: 'Permanent Marker', cursive;
+    --sec-font: 'Architects Daughter', cursive;
+}
+
+body{
+    background-color: var(--prim-color);
+}
+
+h1{
+    font-family: var(--prim-font);
+    color: var(--sec-color);
+    text-align: center;
+    margin-top: 0.25rem;
+    font-size: 2.4em;
+}
+
+.container-circle{
+    position: relative;
+    height: 10.5rem;
+}
+
+.container-circle-red{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(168, 24, 36, 0.8);
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 0.5rem;
+    left: 3.75rem;
+    z-index: 1;
+}
+
+.circle-text {
+    font-family: var(--prim-font);
+    font-size: 1.2em;
+    color: #f4f4f4;
+}
+
+.circle-img {
+    box-shadow: 0 0 0 0.2rem var(--sec-color);
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.5rem;
+    right: 3.75rem;
+}
+.container-video {
+    display: flex;
+    justify-content: center;
+}
+.video {
+    width: 100%;
+    height: 14rem;
+    margin: 0 auto;
+    border: solid 5px var(--sec-color);
+}
+.container-køb {
+    margin-top: 0.5rem;
+    font-family: var(--sec-font);
+    color: var(--sec-color);
+}
+.køb-action-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+.køb-overskrift-div{
+    text-align: center;
+    font-size: 1.8em;
+}
+.køb-knap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2rem;
+    width: 10.5rem;
+    height: 2.75rem;
+    background-image: url(texture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #f4f4f4;
+    border-radius: 1.5rem;
+}
+.køb-billede-div{
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.køb-billede {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 125%;
+    transform: translate(-50%,-50%);
+}
