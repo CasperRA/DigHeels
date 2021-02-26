@@ -6,28 +6,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
+@font-face {
+    font-family: "Earwig";
+    src: url("earwigfactory.ttf");
+}
+
 :root {
     --prim-color: #f2dcc2;
     --sec-color: #a81824;
     --prim-font: 'Permanent Marker', cursive;
     --sec-font: 'Architects Daughter', cursive;
+    --third-font:'Earwig', cursive;
+
 }
 
 body{
     background-color: var(--prim-color);
+}
+.responsive-height-container {
+    min-height: 100vh;
+}
+.background-img-container{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: url(/crumbled.jpg);
+    opacity: 0.25;
+}
+
+
+header {
+    height: 8vh;
 }
 
 h1{
     font-family: var(--prim-font);
     color: var(--sec-color);
     text-align: center;
-    margin-top: 0.25rem;
     font-size: 2.4em;
 }
 
 .container-circle{
     position: relative;
-    height: 10.5rem;
+    height: 24vh;
 }
 
 .container-circle-red{
@@ -76,27 +99,28 @@ h1{
     font-family: var(--sec-font);
     color: var(--sec-color);
 }
+.køb-overskrift-div{
+    text-align: center;
+    font-size: 2.2em;
+    font-family: var(--third-font);
+    height: 6vh;
+}
 .køb-action-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 0.5rem;
+    height: 25vh;
 }
-.køb-overskrift-div{
-    text-align: center;
-    font-size: 1.8em;
+.action-knap-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
 }
 .some-knap-container{
     display: flex;
     justify-content: center;
     margin-top: 0.75rem;
-}
-.instagram-image {
-    width: 4rem;
-}
-.spotify-image{
-    width: 4rem;
-    margin-left: 0.75rem;
 }
 .køb-knap {
     display: flex;
@@ -104,7 +128,8 @@ h1{
     justify-content: center;
     text-decoration: none;
     font-size: 2rem;
-    width: 15rem;
+    width: 14rem;
+    margin-top: 0.5rem;
     height: 2.75rem;
     background-image: url(texture.jpg);
     background-size: cover;
@@ -113,25 +138,17 @@ h1{
     color: #f4f4f4;
     border-radius: 1.5rem;
 }
-.køb-billede-div{
-    position: relative;
-    width: 9rem;
-    height: 9rem;
-    overflow: hidden;
-    border-radius: 50%;
+.instagram-image {
+    width: 4rem;
+    margin-left: 0.75rem;
 }
-.køb-billede {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 125%;
-    transform: translate(-50%,-50%);
+.spotify-image{
+    width: 4rem;
 }
 .container-about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
     background-color: #000000;
     height: 58rem
 }
