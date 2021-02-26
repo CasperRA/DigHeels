@@ -86,9 +86,13 @@ h1{
     text-align: center;
     font-size: 1.8em;
 }
+.some-knap-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
 .instagram-image {
     width: 4rem;
-    margin-left: 0.75rem;
 }
 .spotify-image{
     width: 4rem;
@@ -100,7 +104,7 @@ h1{
     justify-content: center;
     text-decoration: none;
     font-size: 2rem;
-    width: 10.5rem;
+    width: 15rem;
     height: 2.75rem;
     background-image: url(texture.jpg);
     background-size: cover;
