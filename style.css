@@ -32,13 +32,16 @@ body{
     height: 100vh;
     position: absolute;
     z-index: -1;
-    background-image: url(/crumbled.jpg);
+    background-image: url(billeder/crumbled.jpg);
     opacity: 0.25;
 }
 
 
-header {
-    height: 8vh;
+header{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
 }
 
 h1{
@@ -88,8 +91,8 @@ h1{
     justify-content: center;
 }
 .video {
-    width: 100%;
-    height: 14rem;
+    width: 100vw;
+    height: 56.25vw;
     margin: 0 auto;
     border-top: solid 3px var(--sec-color);
     border-bottom: solid 3px var(--sec-color);
@@ -117,11 +120,7 @@ h1{
     justify-content: space-evenly;
     height: 80%;
 }
-.some-knap-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 0.75rem;
-}
+
 .køb-knap {
     display: flex;
     align-items: center;
@@ -131,16 +130,25 @@ h1{
     width: 14rem;
     margin-top: 0.5rem;
     height: 2.75rem;
-    background-image: url(texture.jpg);
+    background-image: url(billeder/texture.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     color: #f4f4f4;
     border-radius: 1.5rem;
 }
+.some-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.some-tekst{
+    display: none;
+}
+
 .instagram-image {
     width: 4rem;
-    margin-left: 0.75rem;
+    margin-left: 1.5rem;
 }
 .spotify-image{
     width: 4rem;
@@ -170,4 +178,151 @@ h1{
     font-family: raleway;
     color: #f4f4f4;
     font-size: 1.2em;
+}
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-size: 2em;
+    }
+    header{
+        height: 8vh;
+    }
+    .circle-text{
+        font-size: 1.15em;
+    }
+    .container-circle-red{
+        width: 7.5rem;
+        height: 7.5rem;
+        left: 3rem;
+    }
+    .circle-img{
+        width: 7.5rem;
+        height: 7.5rem;
+        right: 3rem;
+    }
+    .køb-overskrift-div{
+        font-size: 1.8em;
+    }
+    .about-title{
+        font-size: 1.6em;
+    }
+    .about-text{
+        font-size: 1.1em;
+    }
+    .spotify-image{
+        width: 3.75rem;
+    }
+    .instagram-image{
+        width: 3.75rem;
+    }
+  }
+  
+
+
+@media screen and (min-width: 414px) {
+    header{
+        display: flex;
+        justify-content: center;
+        height: 10vh;
+        align-items: center;
+    }
+    h1{
+        font-size: 2.6em;
+    }
+    .container-circle-red{
+        width: 9.5rem;
+        height: 9.5rem;
+        left: 4.25rem;
+    }
+    .circle-img{
+        width: 9.5rem;
+        height: 9.5rem;
+        right: 4.25rem;
+    }
+    .køb-overskrift-div{
+        font-size: 2.4em;
+    }
+    .køb-knap{
+        width: 16rem;
+    }
+    .spotify-image{
+        width: 4.5rem;
+    }
+    .instagram-image{
+        width: 4.5rem;
+    }
+  }
+  
+  @media screen and (min-height: 812px) {
+      header{
+          display: flex;
+          justify-content: center;
+          height: 10vh;
+          align-items: center;
+      }
+    .container-circle-red{
+        width: 9.5rem;
+        height: 9.5rem;
+        left: 3rem;
+    }
+    .circle-img{
+        width: 9.5rem;
+        height: 9.5rem;
+        right: 3rem;
+    }
+    .spotify-image{
+        width: 4.5rem;
+    }
+    .instagram-image{
+        width: 4.5rem;
+    }
+    .action-knap-container{
+        justify-content: space-evenly;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1281px) {
+    h1{
+        font-size:4em;
+    }
+.container-circle{
+    height: 0;
+}
+.container-video{
+    margin-top: 2rem;
+}
+.video{
+    width: 50vw;
+    height: 28.125vw;
+    border: none;
+}
+.køb-action-container{
+    height: 20vh;
+    margin-top: 1rem;
+}
+.køb-overskrift-div{
+    font-size: 3.25em;
+}
+.køb-knap{
+    width: 18rem;
+    height: 3rem;
+    font-size: 2.5em;
+}
+.some-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20rem;
+    left: 2rem;
+    align-items: center;
+}
+.some-tekst{
+    display: block;
+    font-family: var(--prim-font);
+    font-size: 1.8em;
+}
+.some-knap-container{
+    margin-top: 1rem;
+}
 }
