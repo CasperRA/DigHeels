@@ -6,28 +6,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
+@font-face {
+    font-family: "Earwig";
+    src: url("earwigfactory.ttf");
+}
+
 :root {
     --prim-color: #f2dcc2;
     --sec-color: #a81824;
     --prim-font: 'Permanent Marker', cursive;
     --sec-font: 'Architects Daughter', cursive;
+    --third-font:'Earwig', cursive;
+
 }
+/* Animation */
+@keyframes vinylrotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes vinyllinear {
+
+}
+
 
 body{
     background-color: var(--prim-color);
+}
+.responsive-height-container {
+    min-height: 100vh;
+}
+.background-img-container{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: url(billeder/crumbled.jpg);
+    opacity: 0.25;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
 }
 
 h1{
     font-family: var(--prim-font);
     color: var(--sec-color);
     text-align: center;
-    margin-top: 0.25rem;
     font-size: 2.4em;
 }
 
 .container-circle{
     position: relative;
-    height: 10.5rem;
+    height: 24vh;
 }
 
 .container-circle-red{
@@ -59,14 +94,19 @@ h1{
     position: absolute;
     top: 0.5rem;
     right: 3.75rem;
+    animation-name: vinylrotate;
+    animation-duration: 3.5s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 .container-video {
     display: flex;
     justify-content: center;
 }
 .video {
-    width: 100%;
-    height: 14rem;
+    width: 100vw;
+    height: 56.25vw;
     margin: 0 auto;
     border-top: solid 3px var(--sec-color);
     border-bottom: solid 3px var(--sec-color);
@@ -76,62 +116,65 @@ h1{
     font-family: var(--sec-font);
     color: var(--sec-color);
 }
+.køb-overskrift-div{
+    text-align: center;
+    font-size: 2.2em;
+    font-family: var(--third-font);
+    height: 6vh;
+}
 .køb-action-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 0.5rem;
+    height: 25vh;
 }
-.køb-overskrift-div{
-    text-align: center;
-    font-size: 1.8em;
-}
-.some-knap-container{
+.action-knap-container{
     display: flex;
-    justify-content: center;
-    margin-top: 0.75rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
 }
-.instagram-image {
-    width: 4rem;
-}
-.spotify-image{
-    width: 4rem;
-    margin-left: 0.75rem;
-}
+
 .køb-knap {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 2rem;
-    width: 15rem;
+    width: 14rem;
+    margin-top: 0.5rem;
     height: 2.75rem;
-    background-image: url(texture.jpg);
+    background-image: url(billeder/texture.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     color: #f4f4f4;
     border-radius: 1.5rem;
+    transition: 0.2s;
 }
-.køb-billede-div{
-    position: relative;
-    width: 9rem;
-    height: 9rem;
-    overflow: hidden;
-    border-radius: 50%;
+.køb-knap:hover{
+    transform: scale(1.2);
 }
-.køb-billede {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 125%;
-    transform: translate(-50%,-50%);
+.some-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
-.container-about {
+.some-tekst{
+    display: none;
+}
+
+.instagram-image {
+    width: 3.5rem;
+    margin-left: 1.5rem;
+}
+.spotify-image{
+    width: 3.5rem;
+}
+.about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem;
     background-color: #000000;
     height: 58rem
 }
@@ -139,6 +182,11 @@ h1{
     color: var(--prim-color);
     font-size: 1.8em;
     margin-top: 1rem;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .about-image{
     box-shadow: 0 0 0 0.2rem var(--sec-color);
@@ -153,4 +201,184 @@ h1{
     font-family: raleway;
     color: #f4f4f4;
     font-size: 1.2em;
+}
+
+
+/* Responsive Størrelser */
+
+@media screen and (max-width: 320px) {
+    h1{
+        font-size: 2em;
+    }
+    header{
+        height: 8vh;
+    }
+    .circle-text{
+        font-size: 1.15em;
+    }
+    .container-circle-red{
+        width: 7.5rem;
+        height: 7.5rem;
+        left: 3rem;
+    }
+    .circle-img{
+        width: 7.5rem;
+        height: 7.5rem;
+        right: 3rem;
+    }
+    .køb-overskrift-div{
+        font-size: 1.8em;
+    }
+    .about-title{
+        font-size: 1.6em;
+    }
+    .about-text{
+        font-size: 1.1em;
+    }
+    .spotify-image{
+        width: 3.75rem;
+    }
+    .instagram-image{
+        width: 3.75rem;
+    }
+  }
+  
+
+
+@media screen and (min-width: 414px) {
+    header{
+        display: flex;
+        justify-content: center;
+        height: 10vh;
+        align-items: center;
+    }
+    h1{
+        font-size: 2.6em;
+    }
+    .container-circle-red{
+        width: 9.5rem;
+        height: 9.5rem;
+        left: 4.25rem;
+    }
+    .circle-img{
+        width: 9.5rem;
+        height: 9.5rem;
+        right: 4.25rem;
+    }
+    .køb-overskrift-div{
+        font-size: 2.4em;
+    }
+    .køb-knap{
+        width: 16rem;
+    }
+    .spotify-image{
+        width: 4.5rem;
+    }
+    .instagram-image{
+        width: 4.5rem;
+    }
+  }
+  
+  @media screen and (min-height: 812px) {
+      header{
+          display: flex;
+          justify-content: center;
+          height: 10vh;
+          align-items: center;
+      }
+    .container-circle-red{
+        width: 9.5rem;
+        height: 9.5rem;
+        left: 3rem;
+    }
+    .circle-img{
+        width: 9.5rem;
+        height: 9.5rem;
+        right: 3rem;
+    }
+    .spotify-image{
+        width: 4.5rem;
+    }
+    .instagram-image{
+        width: 4.5rem;
+    }
+    .action-knap-container{
+        justify-content: space-evenly;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1281px) {
+    h1{
+        font-size:4em;
+    }
+.container-circle{
+    height: 0;
+}
+.container-video{
+    margin-top: 2rem;
+}
+.container-circle-red{
+    left: auto;
+    right: 12rem;
+    width: 10rem;
+    height: 10rem;
+    top: 4rem;
+    font-size: 1.2em;
+}
+.circle-img{
+    top: 3rem;
+    width: 11rem;
+    height: 11rem;
+}
+.video{
+    width: 50vw;
+    height: 28.125vw;
+    border: none;
+}
+.køb-action-container{
+    height: 20vh;
+    margin-top: 1rem;
+}
+.køb-overskrift-div{
+    font-size: 3.25em;
+}
+.køb-knap{
+    width: 18rem;
+    height: 3rem;
+    font-size: 2.5em;
+}
+.some-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20rem;
+    left: 2rem;
+    align-items: center;
+}
+.some-tekst{
+    display: block;
+    font-family: var(--prim-font);
+    font-size: 1.8em;
+}
+.some-knap-container{
+    margin-top: 1rem;
+}
+.about-title{
+    font-size: 2.6em;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-image{
+    margin: 7.5rem;
+    margin-top: 5rem;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.about-text{
+    padding-right: 15rem;
+}
 }
