@@ -19,6 +19,15 @@
     --third-font:'Earwig', cursive;
 
 }
+/* Animation */
+@keyframes vinylrotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@keyframes vinyllinear {
+
+}
+
 
 body{
     background-color: var(--prim-color);
@@ -85,6 +94,11 @@ h1{
     position: absolute;
     top: 0.5rem;
     right: 3.75rem;
+    animation-name: vinylrotate;
+    animation-duration: 3.5s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 .container-video {
     display: flex;
@@ -136,6 +150,10 @@ h1{
     text-align: center;
     color: #f4f4f4;
     border-radius: 1.5rem;
+    transition: 0.2s;
+}
+.køb-knap:hover{
+    transform: scale(1.2);
 }
 .some-container{
     display: flex;
@@ -147,13 +165,13 @@ h1{
 }
 
 .instagram-image {
-    width: 4rem;
+    width: 3.5rem;
     margin-left: 1.5rem;
 }
 .spotify-image{
-    width: 4rem;
+    width: 3.5rem;
 }
-.container-about {
+.about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,6 +182,11 @@ h1{
     color: var(--prim-color);
     font-size: 1.8em;
     margin-top: 1rem;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .about-image{
     box-shadow: 0 0 0 0.2rem var(--sec-color);
@@ -179,6 +202,9 @@ h1{
     color: #f4f4f4;
     font-size: 1.2em;
 }
+
+
+/* Responsive Størrelser */
 
 @media screen and (max-width: 320px) {
     h1{
@@ -292,6 +318,19 @@ h1{
 .container-video{
     margin-top: 2rem;
 }
+.container-circle-red{
+    left: auto;
+    right: 12rem;
+    width: 10rem;
+    height: 10rem;
+    top: 4rem;
+    font-size: 1.2em;
+}
+.circle-img{
+    top: 3rem;
+    width: 11rem;
+    height: 11rem;
+}
 .video{
     width: 50vw;
     height: 28.125vw;
@@ -324,5 +363,22 @@ h1{
 }
 .some-knap-container{
     margin-top: 1rem;
+}
+.about-title{
+    font-size: 2.6em;
+}
+.about-content-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-image{
+    margin: 7.5rem;
+    margin-top: 5rem;
+    width: 12.5rem;
+    height: 12.5rem;
+}
+.about-text{
+    padding-right: 15rem;
 }
 }
